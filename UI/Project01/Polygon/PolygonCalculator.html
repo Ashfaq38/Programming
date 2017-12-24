@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    <meta charset="utf-8"/>
+        
+        <title> Regular Polygon Calculator</title>
+         
+        
+        
+        
+        <script language="javascript">
+            
+            function polygon(){
+                var val1 = parseFloat(document.getElementById("sides").value);
+                var val2 = parseFloat(document.getElementById("radius").value); 
+        
+                var Length  = document.getElementById("side");
+                var Perimeter = document.getElementById("peri");
+                var Area = document.getElementById("area");    
+            
+                 Length.value = (2 * val2 *( Math.sin(Math.PI/val1))).toFixed(2); 
+                 Perimeter.value   = (Length.value * val1).toFixed(2);
+                var apothem = val2 * Math.cos(Math.PI/val1) ;
+                 Area.value    = ((apothem * Perimeter.value)/2).toFixed(2) ;
+            
+                
+                
+            
+            
+        }
+                
+        </script>
+        
+        
+    <link rel="stylesheet" type="text/css" href="PolygonCalculator.css">.
+        
+
+        
+    </head>
+    
+    <body >
+        
+        
+        <h1 align="center">Regular Polygon Calculator</h1>
+        
+        <table align="center">
+        <form method="get">
+            <p><tr>
+                
+                    <td><label>Number of Sides</label></td>
+                <td><input type="text" id="sides" name="sides" value="" ></td>
+                </tr>
+            </p>
+            <p>
+                <tr>
+                    <td><label>Radius </label></td>
+                    <td><input type="text"  id="radius" name="radius"  value=""></td>
+                </tr>    
+            </p>
+            <p>
+                <tr>
+                    <td></td>
+                    <td><input type="button" name="submit" value="Calculate" onclick="javascript:polygon()"/></td>
+                </tr>
+            </p>
+            <p>
+                <tr>                    <td><label>Side Length </label></td/>
+                <td><input type="text" id="side" name="side" value="" /></td>
+                </tr>    
+            </p>
+            
+            <p>
+                <tr>
+                    <td><label>Perimeter</label></td> 
+                <td><input type="text" id="peri" name="peri" value=""/></td>
+                </tr>    
+            </p>
+            <p>
+                <tr>
+               <td><label> Area </label></td>
+                <td><input type="text" id="area" name="area"  value=""/></td>
+                </tr>    
+            </p>
+            
+        
+        </form>    
+        
+        </table>
+
+        
+        
+    </body>
+
+
+</html>
